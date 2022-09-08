@@ -13,4 +13,6 @@ public interface UserRepository extends MongoRepository<User, String> {
 
     @Query("{createdAt : {$gt : ?0 }}")
     List<User> findUsersCreatedAfter(Date startDate);
+
+    User findByEmail(String email);
 }

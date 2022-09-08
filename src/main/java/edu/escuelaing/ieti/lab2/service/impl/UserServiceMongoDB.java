@@ -63,6 +63,11 @@ public class UserServiceMongoDB implements UserService {
     }
 
     @Override
+    public User findByEmail(String email) {
+        return userRepository.findByEmail(email);
+    }
+
+    @Override
     public UserDto mapToDto(User user) {
         UserDto userDto = new UserDto();
         userDto.setId(user.getId());

@@ -17,4 +17,5 @@ public interface UserService {
     User mapToEntity(UserDto userDto);
     List<User> findUsersWithNameOrLastNameLike(String queryText);
     List<User> findUsersCreatedAfter(Date startDate);
+    User findByEmail(String email);
 }

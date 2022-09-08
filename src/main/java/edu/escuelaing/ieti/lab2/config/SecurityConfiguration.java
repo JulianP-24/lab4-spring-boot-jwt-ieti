@@ -1,4 +1,4 @@
-package edu.escuelaing.ieti.lab2.SecurityConfiguration;
+package edu.escuelaing.ieti.lab2.config;
 
 import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
@@ -18,6 +18,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter
         http.cors().and().csrf().disable()
                 .authorizeRequests()
                 .antMatchers( HttpMethod.GET, "/v1/user" ).permitAll()
+                .antMatchers( HttpMethod.POST,"/v1/user" ).permitAll()
                 .antMatchers( HttpMethod.POST,"/v1/user" ).permitAll()
                 .anyRequest().authenticated()
                 .and()
