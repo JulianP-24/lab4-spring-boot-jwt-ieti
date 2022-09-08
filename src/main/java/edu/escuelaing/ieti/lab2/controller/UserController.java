@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import javax.annotation.security.RolesAllowed;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -75,7 +77,8 @@ public class UserController {
         return new ResponseEntity<UserDto>(userService.mapToDto(userService.update(updateUser, id)), HttpStatus.CREATED);
     }
 
-    @DeleteMapping( "/{id}" )
+    @PostMapping( "/{id}" )
+    @RolesAllowed("ADMIN")
     public ResponseEntity<Boolean> delete( @PathVariable String id ) {
         try {
             userService.deleteById(id);
