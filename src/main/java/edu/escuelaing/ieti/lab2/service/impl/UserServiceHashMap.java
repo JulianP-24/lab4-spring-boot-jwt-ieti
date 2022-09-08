@@ -78,4 +78,9 @@ public class UserServiceHashMap implements UserService {
     public List<User> findUsersCreatedAfter(Date startDate) {
         return null;
     }
+
+    @Override
+    public User findByEmail(String email) {
+        return null;
+    }
 }
