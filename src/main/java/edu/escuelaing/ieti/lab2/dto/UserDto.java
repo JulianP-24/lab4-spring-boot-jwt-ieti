@@ -13,8 +13,9 @@ public class UserDto implements Serializable {
     private Date createdAt;
     private String password;
 
-    public UserDto(String userName, String userEmail, String userLastName){
+    public UserDto(String userName, String password, String userEmail, String userLastName){
         this.name = userName;
+        this.password = password;
         this.email = userEmail;
         this.lastName = userLastName;
     }

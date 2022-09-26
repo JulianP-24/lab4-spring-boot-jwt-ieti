@@ -15,7 +15,7 @@ public class UserServiceHashMap implements UserService {
     private final Map<String, User> usuarios = new HashMap<>();
 
     public UserServiceHashMap(){
-        usuarios.put("1", new User(new UserDto("Julian","Julian@gmail.com","pena"), "1", new Date()));
+        usuarios.put("1", new User(new UserDto("Julian","1234","Julian@gmail.com","pena"), "1", new Date()));
     }
 
     @Override
