@@ -20,7 +20,7 @@ import static edu.escuelaing.ieti.lab2.entities.Constants.TOKEN_DURATION_MINUTES
 import static edu.escuelaing.ieti.lab2.entities.Constants.CLAIMS_ROLES_KEY;
 
 @RestController
-@RequestMapping( "v1/auth" )
+@RequestMapping( "/v1/auth" )
 public class AuthController
 {
 
