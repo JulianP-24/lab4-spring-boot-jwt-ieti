@@ -1,7 +1,11 @@
 package edu.escuelaing.ieti.lab2.dto;
 
+import edu.escuelaing.ieti.lab2.enums.RoleEnum;
+
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class UserDto implements Serializable {
 
@@ -12,6 +16,7 @@ public class UserDto implements Serializable {
     private String lastName;
     private Date createdAt;
     private String password;
+    private List<RoleEnum> roles;
 
     public UserDto(String userName, String password, String userEmail, String userLastName){
         this.name = userName;
@@ -65,4 +70,13 @@ public class UserDto implements Serializable {
     public String getPassword() { return password; }
 
     public void setPassword(String password) { this.password = password; }
+
+    public List<RoleEnum> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(List<RoleEnum> roles) {
+        this.roles = roles;
+    }
+
 }

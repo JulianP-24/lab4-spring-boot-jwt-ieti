@@ -2,6 +2,7 @@ package edu.escuelaing.ieti.lab2.controller;
 
 import edu.escuelaing.ieti.lab2.dto.UserDto;
 import edu.escuelaing.ieti.lab2.entities.User;
+import edu.escuelaing.ieti.lab2.enums.RoleEnum;
 import edu.escuelaing.ieti.lab2.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

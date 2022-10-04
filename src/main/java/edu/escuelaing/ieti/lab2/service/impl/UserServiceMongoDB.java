@@ -75,6 +75,7 @@ public class UserServiceMongoDB implements UserService {
         userDto.setEmail(user.getEmail());
         userDto.setLastName(user.getLastName());
         userDto.setCreatedAt(user.getCreatedAt());
+        userDto.setRoles(user.getRoles());
         return userDto;
     }
 

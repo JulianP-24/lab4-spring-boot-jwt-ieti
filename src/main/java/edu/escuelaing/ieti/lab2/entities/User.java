@@ -1,6 +1,9 @@
 package edu.escuelaing.ieti.lab2.entities;
 
 import edu.escuelaing.ieti.lab2.dto.UserDto;
+
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 
@@ -26,7 +29,7 @@ public class User {
 
     private String passwordHash;
 
-    private List<RoleEnum> roles;
+    private List<RoleEnum> roles = new ArrayList<>();
 
     public User(UserDto userDto, String id, Date createdAt){
         this.id = id;
@@ -35,6 +38,7 @@ public class User {
         this.lastName = userDto.getLastName();
         this.createdAt = createdAt;
         this.passwordHash = BCrypt.hashpw(userDto.getPassword(), BCrypt.gensalt());
+        addRole(RoleEnum.USER);
     }
 
     public User(){}
@@ -93,5 +97,9 @@ public class User {
 
     public void setRoles(List<RoleEnum> roles) {
         this.roles = roles;
+    }
+
+    public void addRole( RoleEnum roleEnum ){
+        if( !roles.contains( roleEnum)) roles.add(roleEnum);
     }
 }
