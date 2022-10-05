@@ -6,6 +6,8 @@ public class LoginDto
 
     String password;
 
+    public LoginDto(){}
+
     public LoginDto( String email, String password )
     {
         this.email = email;
